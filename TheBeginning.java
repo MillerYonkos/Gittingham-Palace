@@ -8,15 +8,17 @@ public class TheBeginning
 		Scanner input = new Scanner(System.in);
 		out.println("Enter Your Message to be Hashed");
 		String message = input.next();
-
+		hashCode(message);
 	}
 	public static int hashCode(String jonny){
 		int total = 0;
-		for(int i = 0; i <= jonny.length(); i++){
+		for(int i = 0; i < jonny.length(); i++){
 			int nam = jonny.charAt(i);
 			total += nam;
 		}
-
+		total *= 90;
+		total = total / 7;
+		out.println(total);
 		return total;
 	}
 }
